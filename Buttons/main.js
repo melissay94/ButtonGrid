@@ -19,6 +19,11 @@ function loadLevel(startArr) {
 	var rowsArr = [];
 	var check = 'level' + (currentLevel + 1) + 'Check(this)';
 
+	var newKey = document.createElement('img');
+	newKey.setAttribute('src', 'images/level' + (currentLevel + 1) + 'key.png');
+	newKey.setAttribute('alt', 'Answer for Grid');
+	document.getElementById('answerKey').appendChild(newKey);
+
 	// Creates buttons based on array passed in
 	for (var i = 0; i < startArr.length; i++) {
 		var newButton = document.createElement('button');
@@ -58,7 +63,6 @@ function checkCombo(endArr) {
 			alert("You have beaten the board!");
 			currentLevel++;
 			if (currentLevel > gameData.length - 1) {
-				alert("Game Over!");
 				document.getElementById('explanation').innerHTML = " ";
 				var endResults = document.createElement('h2');
 				endResults.appendChild(document.createTextNode('You finished all ' + currentLevel + ' levels!'));

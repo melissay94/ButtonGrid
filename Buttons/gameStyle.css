@@ -22,6 +22,12 @@ h1 {
     font-weight: bold;
     font-size: 4em;
     margin-left: 30%
+} 
+
+img {
+	height: 10em;
+	width: 10em;
+	
 }
 
 button {
@@ -30,6 +36,18 @@ button {
 	margin: 10px;
 	font-size: 50px;
 	font-weight: bold;
+}
+
+#answerKey {
+	display: inline;
+	float left: 
+}
+
+#answerKey h4 {
+	display: inline;
+	font-weight: bold;
+	font-size: 3em;
+	margin-left: 20%;
 }
 
 #buttonArea {
