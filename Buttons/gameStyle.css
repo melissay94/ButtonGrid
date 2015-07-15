@@ -32,13 +32,22 @@ button {
 	font-weight: bold;
 }
 
-#content {
+#buttonArea {
 	max-width: 80%;
 	margin: 0 auto;
 	margin-top: 50px;
 }
 
-.topRow, .middleRow, .bottomRow {
+#startButton {
+	margin: 0 auto;
 	display: block;
-	text-align: center;
+	background: #5FBF6E;
 }
+
+#explanation {
+	max-width: 50%;
+	margin: 0 auto;
+	font-size: 20px;
+}
+
+
