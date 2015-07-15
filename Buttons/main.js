@@ -57,7 +57,18 @@ function checkCombo(endArr) {
 		else if (i === endArr.length - 1) {
 			alert("You have beaten the board!");
 			currentLevel++;
-			loadLevel(gameData[currentLevel]);
+			if (currentLevel > gameData.length - 1) {
+				alert("Game Over!");
+				document.getElementById('explanation').innerHTML = " ";
+				var endResults = document.createElement('h2');
+				endResults.appendChild(document.createTextNode('You finished all ' + currentLevel + ' levels!'));
+				document.getElementById('explanation').appendChild(endResults);
+				document.getElementById('explanation').style.display = 'inherit';
+				document.getElementById('buttonArea').style.display = 'none';
+			} 
+			else {
+				loadLevel(gameData[currentLevel]);
+			}
 		}
 	}
 }

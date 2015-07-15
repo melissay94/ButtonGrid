@@ -4,7 +4,6 @@ function level1Check(currButton) {
 	// Turns dark green button lighter
 	if (currButton.style.backgroundColor === dGreen) {
 		currButton.style.backgroundColor = lGreen;
-		buttonOn = true;
 	}
 	// Turns dark blue button lighter
 	else if (currButton.style.backgroundColor === dBlue) {
