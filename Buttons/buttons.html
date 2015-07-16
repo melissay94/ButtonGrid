@@ -1,1 +1,36 @@
-Buttons Game
+<!doctype html>
+<html>
+<head>
+	<title>Buttons</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="gameStyle.css">
+	<script data-main="main" src="Require.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Buttons!</h1>
+		<div id="answerKey">
+			<h4>Answer: </h4>
+		</div>
+	</header>
+	<div id="explanation">
+		<h3>Welcome to Buttons!</h3>
+		<p>The object of buttons is to press the buttons into different patterns until they match the pattern you have been given at the start of the level. Active buttons will turn a lighter shade than a deactivated button. Sounds simple right??</p>
+		<h4>Here's the twist!</h4>
+		<p>Each different colored button activates a number of other buttons besides itself and adjacent to it!
+		<ul>
+			<li>Green: Activates only itself</li>
+			<li>Blue: Activates itself plus one other adjacent button</li>
+			<li>Orange: Activates itself plus two other adjacent buttons</li>
+			<li>Purple: Activates itself plus three other adjacent buttons</li>
+		</ul>
+		</p>
+		<p>You won't know exactly which buttons will be activated either until you've played around with the board!</p>
+		<button type="button" id="startButton" onclick="startGame()">Start playing now!</button>
+	</div>
+	<div id="buttonArea" style="display:none">
+		
+		</div>
+	</div>
+</body>
+</html>
