@@ -1,6 +1,8 @@
 "use strict"; // strict syntax
 
+// Changes button from current color to the opposite color
 function buttonChange(connectedButton) {
+	
 	if (connectedButton.style.backgroundColor === dGreen) {
 		connectedButton.style.backgroundColor = lGreen;
 	} 
@@ -19,145 +21,82 @@ function buttonChange(connectedButton) {
 	else if (connectedButton.style.backgroundColor === lOrange) {
 		connectedButton.style.backgroundColor = dOrange;
 	}
+	else if (connectedButton.style.backgroundColor === lPurple) {
+		connectedButton.style.backgroundColor = dPurple;
+	}
+	else if (connectedButton.style.backgroundColor === dPurple) {
+		connectedButton.style.backgroundColor = lPurple;
+	}
 }
 
 function level1Check(currButton) {
-	// Turns dark green button lighter
-	if (currButton.style.backgroundColor === dGreen) {
-		currButton.style.backgroundColor = lGreen;
-	}
-	// Turns dark blue button lighter
-	else if (currButton.style.backgroundColor === dBlue) {
-		currButton.style.backgroundColor = lBlue;
 
-		if (currButton === buttonArr[2]) {
-			buttonChange(buttonArr[1]);
-		}
-		else if (currButton === buttonArr[4]) {
-			buttonChange(buttonArr[3]);
-		}
-		else if (currButton === buttonArr[5]) {
-			buttonChange(buttonArr[8]);
-		}
-		else if (currButton === buttonArr[6]) {
-			buttonChange(buttonArr[7]);
-		}
-	}
-	// Turns light green button darker
-	else if(currButton.style.backgroundColor === lGreen) {
-		currButton.style.backgroundColor = dGreen;
-	}
-	// Turns light blue button darker
-	else if (currButton.style.backgroundColor === lBlue) {
-		currButton.style.backgroundColor = dBlue;
-		if (currButton === buttonArr[2]) {
-			buttonChange(buttonArr[1]);
-		}
-		else if (currButton === buttonArr[4]) {
-			buttonChange(buttonArr[3]);
-		}
-		else if (currButton === buttonArr[5]) {
-			buttonChange(buttonArr[8]);
-		}
-		else if (currButton === buttonArr[6]) {
-			buttonChange(buttonArr[7]);
-		}
-	}
+	// Changes button pressed
+	buttonChange(currButton);
 
+	// Checks if current button is a button that is connected to others
+	if (currButton === buttonArr[2]) {
+		buttonChange(buttonArr[1]);
+	}
+	else if (currButton === buttonArr[4]) {
+		buttonChange(buttonArr[3]);
+	}
+	else if (currButton === buttonArr[5]) {
+		buttonChange(buttonArr[8]);
+	}
+	else if (currButton === buttonArr[6]) {
+		buttonChange(buttonArr[7]);
+	} 
+
+	// Checks if your current color combo is the winning combo
 	checkCombo(endData[currentLevel]);
 
 }
 
 function level2Check(currButton) {
-	// Turns dark green button lighter
-	if (currButton.style.backgroundColor === dGreen) {
-		currButton.style.backgroundColor = lGreen;
+	
+	// Changes button pressed
+	buttonChange(currButton);
+
+	// Checks if current button is a button that is connected to others
+	if (currButton === buttonArr[0]) {
+		buttonChange(buttonArr[3]);
 	}
-	// Turns dark blue button lighter
-	else if (currButton.style.backgroundColor === dBlue) {
-		currButton.style.backgroundColor = lBlue;
-		if (currButton === buttonArr[0]) {
-			buttonChange(buttonArr[3]);
-		}
-		else if (currButton === buttonArr[2]) {
-			buttonChange(buttonArr[1]);
-		}
-		else if (currButton === buttonArr[8]) {
-			buttonChange(buttonArr[7]);
-		}
+	else if (currButton === buttonArr[2]) {
+		buttonChange(buttonArr[1]);
 	}
-	// Turns light green button darker
-	else if(currButton.style.backgroundColor === lGreen) {
-		currButton.style.backgroundColor = dGreen;
-	}
-	// Turns light blue button darker
-	else if (currButton.style.backgroundColor === lBlue) {
-		currButton.style.backgroundColor = dBlue;
-		if (currButton === buttonArr[0]) {
-			buttonChange(buttonArr[3]);
-		}
-		else if (currButton === buttonArr[2]) {
-			buttonChange(buttonArr[1]);
-		}
-		else if (currButton === buttonArr[8]) {
-			buttonChange(buttonArr[7]);
-		}
+	else if (currButton === buttonArr[8]) {
+		buttonChange(buttonArr[7]);
 	}
 
+	// Checks if your current color combo is the winning combo
 	checkCombo(endData[currentLevel]);
 }
 
 function level3Check(currButton) {
-	// Turns dark green button lighter
-	if (currButton.style.backgroundColor === dGreen) {
-		currButton.style.backgroundColor = lGreen;
+	
+	// Changes button pressed
+	buttonChange(currButton);
+
+	// Checks if current button is a button that is connected to others
+
+	// Blue buttons
+	if (currButton === buttonArr[0]) {
+		buttonChange(buttonArr[1]);
 	}
-	// Turns dark blue button lighter
-	else if (currButton.style.backgroundColor === dBlue) {
-		currButton.style.backgroundColor = lBlue;
-		if (currButton === buttonArr[0]) {
-			buttonChange(buttonArr[1]);
-		}
-		else if (currButton === buttonArr[4]) {
-			buttonChange(buttonArr[6]);
-		}
-		else if (currButton === buttonArr[8]) {
-			buttonChange(buttonArr[5]);
-		}
+	else if (currButton === buttonArr[4]) {
+		buttonChange(buttonArr[6]);
 	}
-	// Turns dark orange button lighter
-	else if (currButton.style.backgroundColor === dOrange) {
-		currButton.style.backgroundColor = lOrange;
-		if (currButton === buttonArr[5]) {
-			buttonChange(buttonArr[2]);
-			buttonChange(buttonArr[7]);
-		}
-	}
-	// Turns light green button darker
-	else if(currButton.style.backgroundColor === lGreen) {
-		currButton.style.backgroundColor = dGreen;
-	}
-	// Turns light blue button darker
-	else if (currButton.style.backgroundColor === lBlue) {
-		currButton.style.backgroundColor = dBlue;
-		if (currButton === buttonArr[0]) {
-			buttonChange(buttonArr[1]);
-		}
-		else if (currButton === buttonArr[4]) {
-			buttonChange(buttonArr[6]);
-		}
-		else if (currButton === buttonArr[8]) {
-			buttonChange(buttonArr[5]);
-		}
-	}
-	// Turns dark orange button lighter
-	else if (currButton.style.backgroundColor === lOrange) {
-		currButton.style.backgroundColor = dOrange;
-		if (currButton === buttonArr[5]) {
-			buttonChange(buttonArr[2]);
-			buttonChange(buttonArr[7]);
-		}
+	else if (currButton === buttonArr[8]) {
+		buttonChange(buttonArr[5]);
 	}
 
+	// Orange buttons
+	if (currButton === buttonArr[5]) {
+		buttonChange(buttonArr[2]);
+		buttonChange(buttonArr[7]);
+	}
+
+	// Checks if current color combo is winning combo
 	checkCombo(endData[currentLevel]);
 }

@@ -45,8 +45,6 @@ function loadLevel(startArr) {
 		buttonArr[i].style.backgroundColor = startArr[i];
 		newButton.appendChild(document.createTextNode("Hello!"));
 		newButton.style.fontSize = (Math.round((gridWidth/rowsNeeded) - 5) / 4) + 'px';
-		console.log(Math.round((gridWidth/rowsNeeded) - 5) / 4);
-
 	}
 	// Creates new row divs to hold the buttons created
 	var k = 0;
