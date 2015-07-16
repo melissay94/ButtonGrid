@@ -28,7 +28,6 @@ img {
 
 button {
 	margin: 10px;
-	font-size: 50px;
 	font-weight: bold;
 }
 
@@ -68,12 +67,14 @@ button {
 #startButton {
 	margin: 0 auto;
 	display: block;
+	font-size: 50px;
 	background: #5FBF6E;
 }
 
 #endButton {
 	margin: 0 auto;
 	display: block;
+	font-size: 50px;
 	background: #B94CD4;
 }
 

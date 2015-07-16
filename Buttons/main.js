@@ -32,6 +32,8 @@ function loadLevel(startArr) {
 	grid.setAttribute('id', 'buttonGrid');
 	var gridWidth = Math.round(buttonArea.offsetWidth * .8 * .4);
 
+	var textSize = 50/rowsNeeded;
+
 	// Creates buttons based on array passed in
 	for (var i = 0; i < startArr.length; i++) {
 		var newButton = document.createElement('button');
@@ -42,6 +44,8 @@ function loadLevel(startArr) {
 		newButton.style.height = Math.round((gridWidth/rowsNeeded) - 5) + 'px';
 		buttonArr[i].style.backgroundColor = startArr[i];
 		newButton.appendChild(document.createTextNode("Hello!"));
+		newButton.style.fontSize = (Math.round((gridWidth/rowsNeeded) - 5) / 4) + 'px';
+		console.log(Math.round((gridWidth/rowsNeeded) - 5) / 4);
 
 	}
 	// Creates new row divs to hold the buttons created
