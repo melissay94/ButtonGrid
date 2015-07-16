@@ -121,6 +121,7 @@ function checkCombo(endArr) {
 			alert("You have beaten the board!");
 			currentLevel++;
 			if (currentLevel > gameData.length - 1) {
+				document.getElementById('score').innerHTML = ' ';
 				document.getElementById('answerKey').removeChild(document.getElementById('answerPhoto'));
 				document.getElementById('explanation').innerHTML = " ";
 				var endResults = document.createElement('h2');
