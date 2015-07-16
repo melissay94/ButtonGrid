@@ -11,6 +11,13 @@ function startGame() {
 	loadLevel(gameData[currentLevel]);
 }
 
+function restartGame() {
+	document.getElementById('endGame').style.display = 'none';
+	document.getElementById('buttonArea').style.display = 'block';
+	currentLevel = 0;
+	loadLevel(gameData[currentLevel]);
+}
+
 // Loads a level based on the array passed in
 function loadLevel(startArr) {
 	document.getElementById('buttonArea').innerHTML = '';
@@ -64,11 +71,12 @@ function checkCombo(endArr) {
 			alert("You have beaten the board!");
 			currentLevel++;
 			if (currentLevel > gameData.length - 1) {
+				document.getElementById('answerKey').removeChild(document.getElementById('answerPhoto'));
 				document.getElementById('explanation').innerHTML = " ";
 				var endResults = document.createElement('h2');
 				endResults.appendChild(document.createTextNode('You finished all ' + currentLevel + ' levels!'));
-				document.getElementById('explanation').appendChild(endResults);
-				document.getElementById('explanation').style.display = 'inherit';
+				document.getElementById('score').appendChild(endResults);
+				document.getElementById('endGame').style.display = 'inherit';
 				document.getElementById('buttonArea').style.display = 'none';
 			} 
 			else {

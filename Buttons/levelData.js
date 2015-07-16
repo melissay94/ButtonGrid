@@ -2,6 +2,8 @@ var lBlue = 'rgb(120, 205, 229)';
 var dBlue = 'rgb(86, 171, 195)';
 var lGreen = 'rgb(95, 191, 110)';
 var dGreen = 'rgb(61, 141, 76)';
+var lOrange = 'rgb(255, 163, 121)';
+var dOrange = 'rgb(221, 113, 97)';
 
 var gameData = [];
 var endData = [];
@@ -30,4 +32,15 @@ var level2End = [lBlue, lGreen, dBlue,
 
 endData.push(level2End);
 
+var level3 = [dBlue, dGreen, dGreen,
+			 dGreen, dBlue, dOrange, 
+			 dGreen, dGreen, dBlue];
+
+gameData.push(level3);
+
+var level3End = [lBlue, dGreen, lGreen, 
+				lGreen, dBlue, lOrange, 
+				dGreen, lGreen, dBlue]; 
+
+endData.push(level3End);
 

@@ -4,6 +4,8 @@
 	<title>Buttons</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="Buttons/gameStyle.css">
+	<link rel="icon" type="Buttons/images/favicon.ico" href="image/x-icon">
+	<link rel="shortcut icon" href="Buttons/images/favicon.ico" type="image/x-icon">
 	<script data-main="Buttons/main" src="Buttons/Require.js"></script>
 </head>
 <body>
@@ -28,9 +30,11 @@
 		<p>You won't know exactly which buttons will be activated either until you've played around with the board!</p>
 		<button type="button" id="startButton" onclick="startGame()">Start playing now!</button>
 	</div>
-	<div id="buttonArea" style="display:none">
-		
-		</div>
+	<div id="buttonArea" style="display:none"></div>
+	<div id="endGame" style="display:none">
+		<div id="score"></div>
+		<button type="button" id="endButton" onclick="restartGame()">Restart</button>
+	</div>
 	</div>
 </body>
 </html>
