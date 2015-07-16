@@ -21,23 +21,21 @@ function restartGame() {
 // Loads a level based on the array passed in
 function loadLevel(startArr) {
 	document.getElementById('buttonArea').innerHTML = '';
+	document.getElementById('buttonArea').appendChild(createAnswerKey(startArr));
+
 	buttonArr = [];
 	var rowsNeeded = Math.sqrt(startArr.length);
 	var rowsArr = [];
 	var check = 'level' + (currentLevel + 1) + 'Check(this)';
 
-	var newKey = document.createElement('img');
-	newKey.setAttribute('src', 'Buttons/images/level' + (currentLevel + 1) + 'key.png');
-	newKey.setAttribute('alt', 'Answer for Grid');
-	newKey.setAttribute('id', 'answerPhoto');
-	document.getElementById('answerKey').appendChild(newKey);
+	var grid = document.createElement('div');
+	grid.setAttribute('id', 'buttonGrid');
 
 	// Creates buttons based on array passed in
 	for (var i = 0; i < startArr.length; i++) {
 		var newButton = document.createElement('button');
 		newButton.setAttribute('id', 'button' + (i + 1));
 		newButton.setAttribute('onclick', check);
-		console.log(newButton);
 		buttonArr.push(newButton);
 		buttonArr[i].style.backgroundColor = startArr[i];
 		newButton.appendChild(document.createTextNode("Hello!"));
@@ -50,7 +48,7 @@ function loadLevel(startArr) {
 		newRow.setAttribute('id', 'row' + j);
 		newRow.style.display = 'block';
 		newRow.style.textAlign = 'center';
-		document.getElementById('buttonArea').appendChild(newRow);
+		grid.appendChild(newRow);
 		rowsArr.push(newRow);
 		
 		while (k < rowsNeeded * j) {
@@ -58,7 +56,59 @@ function loadLevel(startArr) {
 			k++;
 		}
 	}
+
+	// Creates level tracker for which level you're currently on
+	var levelTracker = document.createElement('h2');
+	levelTracker.appendChild(document.createTextNode('Current Level: ' + (currentLevel + 1)));
+	grid.appendChild(levelTracker);
+
+	document.getElementById('buttonArea').appendChild(grid);
 	
+}
+
+function createAnswerKey(startArr) {
+	// Create answer div
+	var answerKey = document.createElement('div');
+	answerKey.setAttribute('id', 'answerKey');
+
+	// Create heading label for answer box
+	var heading = document.createElement('h4');
+	heading.appendChild(document.createTextNode("Answer: "));
+	answerKey.appendChild(heading);
+
+	// Create image
+	var newKey = document.createElement('img');
+	newKey.setAttribute('src', 'Buttons/images/level' + (currentLevel + 1) + 'key.png');
+	newKey.setAttribute('alt', 'Answer for Grid');
+	newKey.setAttribute('id', 'answerPhoto');
+	answerKey.appendChild(newKey);
+	var daRulez = document.createElement('ul');
+
+	// Adds rules for only tiles that appear on the board
+	if (startArr.indexOf(dGreen) > -1) {
+		var greenRule = document.createElement('li');
+		greenRule.appendChild(document.createTextNode("Green Tiles: Themselves"));
+		daRulez.appendChild(greenRule);
+	}
+	if (startArr.indexOf(dBlue) > -1) {
+		var blueRule = document.createElement('li');
+		blueRule.appendChild(document.createTextNode("Blue Tiles: Themselves + 1 tile"));
+		daRulez.appendChild(blueRule);
+	}
+	if (startArr.indexOf(dOrange) > -1) {
+		var orangeRule = document.createElement('li');
+		orangeRule.appendChild(document.createTextNode("Orange Tiles: Themselves + 2 tile"));
+		daRulez.appendChild(orangeRule);
+	}
+	if (startArr.indexOf(dPurple) > -1) {
+		var purpleRule = document.createElement('li');
+		purpleRule.appendChild(document.createTextNode("Blue Tiles: Themselves + 1 tile"));
+		daRulez.appendChild(purpleRule);
+	}
+
+	answerKey.appendChild(daRulez);
+
+	return answerKey;
 }
 
 // Checks each time a button is clicked to see if the winning combo has appeared

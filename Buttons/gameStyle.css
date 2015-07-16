@@ -16,8 +16,8 @@ header {
 h1 {
 	display: inline;
     font-weight: bold;
-    font-size: 7em;
-    margin-left: 30%
+    font-size: 3em;
+	margin-left: 10%;
 } 
 
 img {
@@ -34,22 +34,37 @@ button {
 	font-weight: bold;
 }
 
+#buttonArea {
+	max-width: 80%;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
 #answerKey {
 	display: inline;
-	float left: 
+	margin-left: 15%;
+	margin-top: 10px;
+	max-width: 30%;
+	float: left;
 }
 
 #answerKey h4 {
 	display: inline;
 	font-weight: bold;
 	font-size: 3em;
-	margin-left: 50px;
+	vertical-align: top;
 }
 
-#buttonArea {
-	max-width: 80%;
+#buttonGrid {
+	display: inline;
+	max-width: 70%;
+	float: right;
+	margin-right: 32%;
+}
+
+#buttonGrid h2 {
 	margin: 0 auto;
-	margin-top: 50px;
+	text-align: center;
 }
 
 #startButton {
@@ -61,7 +76,7 @@ button {
 #endButton {
 	margin: 0 auto;
 	display: block;
-	background: #A769FF;
+	background: #B94CD4;
 }
 
 #explanation {

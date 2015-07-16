@@ -1,9 +1,11 @@
 var lBlue = 'rgb(120, 205, 229)';
-var dBlue = 'rgb(86, 171, 195)';
+var dBlue = 'rgb(29, 100, 169)';
 var lGreen = 'rgb(95, 191, 110)';
-var dGreen = 'rgb(61, 141, 76)';
+var dGreen = 'rgb(4, 86, 50)';
 var lOrange = 'rgb(255, 163, 121)';
-var dOrange = 'rgb(221, 113, 97)';
+var dOrange = 'rgb(164, 58, 0)';
+var lPurple = 'rgb(176, 72, 201)';
+var dPurple = 'rgb(85, 0, 141)';
 
 var gameData = [];
 var endData = [];
@@ -44,3 +46,16 @@ var level3End = [lBlue, dGreen, lGreen,
 
 endData.push(level3End);
 
+// Note: Need to change how the tile sizes work
+
+// var level4 = [dBlue, dGreen, dOrange, dGreen,
+// 			  dOrange, dBlue, dGreen, dOrange, 
+// 			  dGreen, dGreen, dBlue, dOrange, 
+// 			  dBlue, dBlue, dOrange, dGreen];
+
+// gameData.push(level4);
+
+// var level4end = [dBlue, lGreen, dOrange, dGreen,
+// 			  dOrange, dBlue, dGreen, lOrange, 
+// 			  dGreen, dGreen, lBlue, dOrange, 
+// 			  dBlue, dBlue, lOrange, dGreen];
