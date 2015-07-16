@@ -22,6 +22,7 @@ function loadLevel(startArr) {
 	var newKey = document.createElement('img');
 	newKey.setAttribute('src', 'images/level' + (currentLevel + 1) + 'key.png');
 	newKey.setAttribute('alt', 'Answer for Grid');
+	newKey.setAttribute('id', 'answerPhoto');
 	document.getElementById('answerKey').appendChild(newKey);
 
 	// Creates buttons based on array passed in
@@ -71,6 +72,7 @@ function checkCombo(endArr) {
 				document.getElementById('buttonArea').style.display = 'none';
 			} 
 			else {
+				document.getElementById('answerKey').removeChild(document.getElementById('answerPhoto'));
 				loadLevel(gameData[currentLevel]);
 			}
 		}

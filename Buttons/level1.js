@@ -1,5 +1,14 @@
 "use strict"; // strict syntax
 
+function buttonChange(connectedButton) {
+	if (connectedButton.style.backgroundColor === dGreen) {
+		connectedButton.style.backgroundColor = lGreen;
+	} 
+	else if (connectedButton.style.backgroundColor === lGreen) {
+		connectedButton.style.backgroundColor = dGreen;
+	}
+}
+
 function level1Check(currButton) {
 	// Turns dark green button lighter
 	if (currButton.style.backgroundColor === dGreen) {
@@ -10,16 +19,16 @@ function level1Check(currButton) {
 		currButton.style.backgroundColor = lBlue;
 
 		if (currButton === buttonArr[2]) {
-			buttonArr[1].style.backgroundColor = lGreen;
+			buttonChange(buttonArr[1]);
 		}
 		else if (currButton === buttonArr[4]) {
-			buttonArr[3].style.backgroundColor = lGreen;
+			buttonChange(buttonArr[3]);
 		}
 		else if (currButton === buttonArr[5]) {
-			buttonArr[8].style.backgroundColor = lGreen;
+			buttonChange(buttonArr[8]);
 		}
 		else if (currButton === buttonArr[6]) {
-			buttonArr[7].style.backgroundColor = lGreen;
+			buttonChange(buttonArr[7]);
 		}
 	}
 	// Turns light green button darker
@@ -30,16 +39,16 @@ function level1Check(currButton) {
 	else if (currButton.style.backgroundColor === lBlue) {
 		currButton.style.backgroundColor = dBlue;
 		if (currButton === buttonArr[2]) {
-			buttonArr[1].style.backgroundColor = dGreen;
+			buttonChange(buttonArr[1]);
 		}
 		else if (currButton === buttonArr[4]) {
-			buttonArr[3].style.backgroundColor = dGreen;
+			buttonChange(buttonArr[3]);
 		}
 		else if (currButton === buttonArr[5]) {
-			buttonArr[8].style.backgroundColor = dGreen;
+			buttonChange(buttonArr[8]);
 		}
 		else if (currButton === buttonArr[6]) {
-			buttonArr[7].style.backgroundColor = dGreen;
+			buttonChange(buttonArr[7]);
 		}
 	}
 
@@ -56,13 +65,13 @@ function level2Check(currButton) {
 	else if (currButton.style.backgroundColor === dBlue) {
 		currButton.style.backgroundColor = lBlue;
 		if (currButton === buttonArr[0]) {
-			buttonArr[3].style.backgroundColor = lGreen;
+			buttonChange(buttonArr[3]);
 		}
 		else if (currButton === buttonArr[2]) {
-			buttonArr[1].style.backgroundColor = lGreen;
+			buttonChange(buttonArr[1]);
 		}
 		else if (currButton === buttonArr[8]) {
-			buttonArr[7].style.backgroundColor = lGreen;
+			buttonChange(buttonArr[7]);
 		}
 	}
 	// Turns light green button darker
@@ -73,13 +82,13 @@ function level2Check(currButton) {
 	else if (currButton.style.backgroundColor === lBlue) {
 		currButton.style.backgroundColor = dBlue;
 		if (currButton === buttonArr[0]) {
-			buttonArr[3].style.backgroundColor = dGreen;
+			buttonChange(buttonArr[3]);
 		}
 		else if (currButton === buttonArr[2]) {
-			buttonArr[1].style.backgroundColor = dGreen;
+			buttonChange(buttonArr[1]);
 		}
 		else if (currButton === buttonArr[8]) {
-			buttonArr[7].style.backgroundColor = dGreen;
+			buttonChange(buttonArr[7]);
 		}
 	}
 
