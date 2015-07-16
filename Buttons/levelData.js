@@ -48,14 +48,14 @@ endData.push(level3End);
 
 // Note: Need to change how the tile sizes work
 
-// var level4 = [dBlue, dGreen, dOrange, dGreen,
-// 			  dOrange, dBlue, dGreen, dOrange, 
-// 			  dGreen, dGreen, dBlue, dOrange, 
-// 			  dBlue, dBlue, dOrange, dGreen];
+var level4 = [dBlue, dGreen, dOrange, dGreen,
+			  dOrange, dBlue, dGreen, dOrange, 
+			  dGreen, dGreen, dBlue, dOrange, 
+			  dBlue, dBlue, dOrange, dGreen];
 
-// gameData.push(level4);
+gameData.push(level4);
 
-// var level4end = [dBlue, lGreen, dOrange, dGreen,
-// 			  dOrange, dBlue, dGreen, lOrange, 
-// 			  dGreen, dGreen, lBlue, dOrange, 
-// 			  dBlue, dBlue, lOrange, dGreen];
+var level4end = [dBlue, lGreen, dOrange, dGreen,
+			  dOrange, dBlue, dGreen, lOrange, 
+			  dGreen, dGreen, lBlue, dOrange, 
+			  dBlue, dBlue, lOrange, dGreen];
