@@ -10,52 +10,64 @@ var dPurple = 'rgb(85, 0, 141)';
 var gameData = [];
 var endData = [];
 
-var level1 = [dGreen, dGreen, dBlue, 
+var level1 = [dGreen, dGreen, dGreen, dGreen];
+gameData.push(level1);
+
+var level1End = [dGreen, lGreen, lGreen, dGreen];
+endData.push(level1End);
+
+var level2 = [dGreen, dBlue, dGreen, dGreen];
+gameData.push(level2);
+
+var level2End = [lGreen, lBlue, dGreen, lGreen];
+endData.push(level2End);
+
+var level3 = [dGreen, dGreen, dBlue, 
 			   dGreen, dBlue, dBlue, 
 			   dBlue, dGreen, dGreen];
 
-gameData.push(level1);
+gameData.push(level3);
 
-var level1End = [lGreen, dGreen, dBlue,
+var level3End = [lGreen, dGreen, dBlue,
 				  lGreen, lBlue, dBlue, 
 				  lBlue, dGreen, lGreen];
 
-endData.push(level1End);
+endData.push(level3End);
 
-var level2 = [dBlue, dGreen, dBlue, 
+var level4 = [dBlue, dGreen, dBlue, 
 			  dGreen, dGreen, dGreen, 
 			  dGreen, dGreen, dBlue];
 
-gameData.push(level2);
+gameData.push(level4);
 
-var level2End = [lBlue, lGreen, dBlue,
+var level4End = [lBlue, lGreen, dBlue,
 				 dGreen, lGreen, lGreen,
 				 lGreen, dGreen, lBlue];
 
-endData.push(level2End);
+endData.push(level4End);
 
-var level3 = [dBlue, dGreen, dGreen,
+var level5 = [dBlue, dGreen, dGreen,
 			 dGreen, dBlue, dOrange, 
 			 dGreen, dGreen, dBlue];
 
-gameData.push(level3);
+gameData.push(level5);
 
-var level3End = [lBlue, dGreen, lGreen, 
+var level5End = [lBlue, dGreen, lGreen, 
 				lGreen, dBlue, lOrange, 
 				dGreen, lGreen, dBlue]; 
 
-endData.push(level3End);
+endData.push(level5End);
 
-// Note: Need to change how the tile sizes work
-
-var level4 = [dBlue, dGreen, dOrange, dGreen,
+var level6 = [dBlue, dGreen, dOrange, dGreen,
 			  dOrange, dBlue, dGreen, dOrange, 
 			  dGreen, dGreen, dBlue, dOrange, 
 			  dBlue, dBlue, dOrange, dGreen];
 
-gameData.push(level4);
+gameData.push(level6);
 
-var level4end = [dBlue, lGreen, dOrange, dGreen,
+var level6End = [dBlue, lGreen, dOrange, dGreen,
 			  dOrange, dBlue, dGreen, lOrange, 
 			  dGreen, dGreen, lBlue, dOrange, 
 			  dBlue, dBlue, lOrange, dGreen];
+
+endData.push(level6End);

@@ -30,6 +30,21 @@ function buttonChange(connectedButton) {
 }
 
 function level1Check(currButton) {
+	buttonChange(currButton);
+	checkCombo(endData[currentLevel]);
+}
+
+function level2Check(currButton) {
+	buttonChange(currButton);
+
+	if (currButton === buttonArr[1]) {
+		buttonChange(buttonArr[2]);
+	}
+
+	checkCombo(endData[currentLevel]);
+}
+
+function level3Check(currButton) {
 
 	// Changes button pressed
 	buttonChange(currButton);
@@ -53,7 +68,7 @@ function level1Check(currButton) {
 
 }
 
-function level2Check(currButton) {
+function level4Check(currButton) {
 	
 	// Changes button pressed
 	buttonChange(currButton);
@@ -73,7 +88,7 @@ function level2Check(currButton) {
 	checkCombo(endData[currentLevel]);
 }
 
-function level3Check(currButton) {
+function level5Check(currButton) {
 	
 	// Changes button pressed
 	buttonChange(currButton);

@@ -92,22 +92,22 @@ function createAnswerKey(startArr) {
 	// Adds rules for only tiles that appear on the board
 	if (startArr.indexOf(dGreen) > -1) {
 		var greenRule = document.createElement('li');
-		greenRule.appendChild(document.createTextNode("Green Tiles: Themselves"));
+		greenRule.appendChild(document.createTextNode("Green Tiles: Change themselves"));
 		daRulez.appendChild(greenRule);
 	}
 	if (startArr.indexOf(dBlue) > -1) {
 		var blueRule = document.createElement('li');
-		blueRule.appendChild(document.createTextNode("Blue Tiles: Themselves + 1 tile"));
+		blueRule.appendChild(document.createTextNode("Blue Tiles: Change themselves + 1 tile"));
 		daRulez.appendChild(blueRule);
 	}
 	if (startArr.indexOf(dOrange) > -1) {
 		var orangeRule = document.createElement('li');
-		orangeRule.appendChild(document.createTextNode("Orange Tiles: Themselves + 2 tile"));
+		orangeRule.appendChild(document.createTextNode("Orange Tiles: Change themselves + 2 tile"));
 		daRulez.appendChild(orangeRule);
 	}
 	if (startArr.indexOf(dPurple) > -1) {
 		var purpleRule = document.createElement('li');
-		purpleRule.appendChild(document.createTextNode("Blue Tiles: Themselves + 1 tile"));
+		purpleRule.appendChild(document.createTextNode("Blue Tiles: Change themselves + 1 tile"));
 		daRulez.appendChild(purpleRule);
 	}
 
