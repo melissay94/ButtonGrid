@@ -1,6 +1,6 @@
 "use strict";
-require(["level1.js"]);
-require(["levelData.js"]);
+require(["Buttons/level1.js"]);
+require(["Buttons/levelData.js"]);
 var buttonArr = [];
 var currentLevel = 0;
 
@@ -20,7 +20,7 @@ function loadLevel(startArr) {
 	var check = 'level' + (currentLevel + 1) + 'Check(this)';
 
 	var newKey = document.createElement('img');
-	newKey.setAttribute('src', 'images/level' + (currentLevel + 1) + 'key.png');
+	newKey.setAttribute('src', 'Buttons/images/level' + (currentLevel + 1) + 'key.png');
 	newKey.setAttribute('alt', 'Answer for Grid');
 	newKey.setAttribute('id', 'answerPhoto');
 	document.getElementById('answerKey').appendChild(newKey);
