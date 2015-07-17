@@ -64,6 +64,13 @@ button {
 	text-align: center;
 }
 
+#cheatCode {
+	margin-bottom: 30px;
+}
+
+#cheatCode h4{
+	display: inline;
+}
 #startButton {
 	margin: 0 auto;
 	display: block;
