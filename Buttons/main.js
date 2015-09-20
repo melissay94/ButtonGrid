@@ -35,7 +35,17 @@ function restartGame() {
 	document.getElementById('endGame').style.display = 'none';
 	document.getElementById('buttonArea').style.display = 'block';
 	currentLevel = 0;
+	buttonClicks = 0;
+	total = 0;
 	loadLevel(gameData[currentLevel]);
+}
+
+function goHome() {
+	document.getElementById('explanation').style.display = 'inherit';
+	document.getElementById('buttonArea').style.display = 'none';
+	currentLevel = 0;
+	buttonClicks = 0;
+	total = 0;
 }
 
 // Loads a level based on the array passed in
