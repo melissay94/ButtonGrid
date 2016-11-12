@@ -327,3 +327,69 @@ function level9Check(currButton) {
 
 	checkCombo(endData[currentLevel]);
 }
+
+function level10Check(currButton) {
+
+	buttonClicks += 1;
+	document.getElementById('levelTracker').childNodes[1].nodeValue = buttonClicks;
+
+	buttonChange(currButton);
+
+	//Blue buttons
+	if (currButton === buttonArr[2]) {
+		buttonChange(buttonArr[1]);
+	}
+	else if (currButton === buttonArr[5]) {
+		buttonChange(buttonArr[8]);
+	}
+	else if (currButton === buttonArr[6]) {
+		buttonChange(buttonArr[3]);
+	}
+	else if (currButton === buttonArr[8]) {
+		buttonChange(buttonArr[4]);
+	}
+	else if (currButton === buttonArr[10]) {
+		buttonChange(buttonArr[9]);
+	}
+	else if (currButton === buttonArr[12]) {
+		buttonChange(buttonArr[8]) 
+	}
+	else if (currButton === buttonArr[14]) {
+		buttonChange(buttonArr[11]);
+	}
+
+	// Orange buttons 
+	if (currButton === buttonArr[3]) {
+		buttonChange(buttonArr[2]);
+		buttonChange(buttonArr[7]);
+	}
+	else if (currButton === buttonArr[4]) {
+		buttonChange(buttonArr[5]);
+		buttonChange(buttonArr[0]);
+	}
+	else if (currButton === buttonArr[9]) {
+		buttonChange(buttonArr[4]);
+		buttonChange(buttonArr[13]);
+	}
+	else if (currButton === buttonArr[15]) {
+		buttonChange(buttonArr[14]);
+		buttonChange(buttonArr[10]);
+	}
+
+	// Purple buttons
+	if (currButton === buttonArr[1]) {
+		buttonChange(buttonArr[0]);
+		buttonChange(buttonArr[6]);
+		buttonChange(buttonArr[2]);
+	}
+	else if (currButton === buttonArr[11]) {
+		buttonChange(buttonArr[7]);
+		buttonChange(buttonArr[10]);
+		buttonChange(buttonArr[15]);
+	}
+
+	checkCombo(endData[currentLevel]);
+}
+
+
+

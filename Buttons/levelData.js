@@ -9,9 +9,9 @@ var dPurple = 'rgb(85, 0, 141)';
 
 var gameData = [];
 var endData = [];
-var cheatCodes = ['','begin', 'cake', 'droplet', 'elephant', 'frost', 'gross', "hotdog", "instant"];
-var totalPoints = [100, 150, 250, 350, 450, 600, 750, 850, 950];
-var minSteps = [2, 4, 5, 8, 4, 12, 16, 5, 9];
+var cheatCodes = ['','begin', 'cake', 'droplet', 'elephant', 'frost', 'gross', "hotdog", "instant", "joker"];
+var totalPoints = [50, 50, 100, 100, 100, 100, 100, 200, 200, 200];
+var minSteps = [2, 4, 5, 8, 4, 9, 5, 12, 16, 12 ];
 
 var level1 = [dGreen, dGreen, dGreen, dGreen];
 gameData.push(level1);
@@ -116,3 +116,14 @@ var level9End = [lBlue, dOrange, dBlue, lBlue,
 
 endData.push(level9End);
 
+var level10 = [dGreen, dPurple, dBlue, dOrange,
+				dOrange, dBlue, dBlue, dGreen, 
+				dBlue, dOrange, dBlue, dPurple,
+				dBlue, dGreen, dBlue, dOrange]; 
+
+gameData.push(level10);
+
+var level10End = [lGreen, lPurple, lBlue, dOrange,
+				lOrange, dBlue, lBlue, dGreen, 
+				dBlue, lOrange, dBlue, lPurple,
+				dBlue, lGreen, dBlue, dOrange]; 

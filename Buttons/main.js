@@ -55,9 +55,9 @@ function loadLevel(startArr) {
 	document.getElementById('buttonArea').appendChild(createAnswerKey(startArr));
 
 	buttonArr = [];
+	buttonClicks = 0;
 	var rowsNeeded = Math.sqrt(startArr.length);
 	var rowsArr = [];
-	var buttonClicks = 0;
 	var check = 'level' + (currentLevel + 1) + 'Check(this)';
 
 	var grid = document.createElement('div');
@@ -170,7 +170,8 @@ function checkCombo(endArr) {
 		}
 		else if (i === endArr.length - 1) {
 			currentLevel++;
-			total += totalPoints[currentLevel - 1];
+			total += totalPoints[currentLevel - 1] - ((buttonClicks - minSteps[currentLevel - 1]) * 5);
+
 			levelSound.play();
 			if (currentLevel > gameData.length - 1) {
 				document.getElementById('score').innerHTML = ' ';
