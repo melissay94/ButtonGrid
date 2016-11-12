@@ -142,7 +142,7 @@ function createAnswerKey(startArr) {
 	}
 	if (startArr.indexOf(dPurple) > -1) {
 		var purpleRule = document.createElement('li');
-		purpleRule.appendChild(document.createTextNode("Blue Tiles: Change themselves + 1 tile"));
+		purpleRule.appendChild(document.createTextNode("Purple Tiles: Change themselves + 3 tile"));
 		daRulez.appendChild(purpleRule);
 	}
 

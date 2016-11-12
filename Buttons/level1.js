@@ -151,6 +151,76 @@ function level6Check(currButton) {
 
 	buttonChange(currButton);
 
+	// It's official, I need a new system
+
+	// Blue Buttons
+	if (currButton === buttonArr[2]) 
+		buttonChange(buttonArr[4])
+	else if (currButton === buttonArr[3])
+		buttonChange(buttonArr[0])
+	else if (currButton === buttonArr[4])
+		buttonChange(buttonArr[3])
+	else if (currButton === buttonArr[8])
+		buttonChange(buttonArr[7])
+	
+	// Orange Buttons
+	if (currButton === buttonArr[0]) {
+		buttonChange(buttonArr[3])
+		buttonChange(buttonArr[4])
+	}
+	else if (currButton === buttonArr[5]) {
+		buttonChange(buttonArr[1])
+		buttonChange(buttonArr[7])
+	}
+	else if (currButton === buttonArr[7]) {
+		buttonChange(buttonArr[6])
+		buttonChange(buttonArr[5])
+	}
+
+
+	checkCombo(endData[currentLevel]);
+}
+
+function level7Check(currButton) {
+
+	buttonClicks += 1;
+	document.getElementById('levelTracker').childNodes[1].nodeValue = buttonClicks;
+
+	buttonChange(currButton);
+
+	// It's official, I need a new system
+
+	// Blue Buttons
+	if (currButton === buttonArr[1]) 
+		buttonChange(buttonArr[2])
+	else if (currButton === buttonArr[5])
+		buttonChange(buttonArr[8])
+	else if (currButton === buttonArr[8])
+		buttonChange(buttonArr[4])
+	
+	// Orange Button
+	if (currButton === buttonArr[6]) {
+		buttonChange(buttonArr[3])
+		buttonChange(buttonArr[4])
+	}
+
+	// Purple Button
+	if(currButton === buttonArr[4]) {
+		buttonChange(buttonArr[1])
+		buttonChange(buttonArr[6])
+		buttonChange(buttonArr[7])
+	}
+
+	checkCombo(endData[currentLevel]);
+}
+
+function level8Check(currButton) {
+
+	buttonClicks += 1;
+	document.getElementById('levelTracker').childNodes[1].nodeValue = buttonClicks;
+
+	buttonChange(currButton);
+
 	//Blue buttons
 	if (currButton === buttonArr[0]) {
 		buttonChange(buttonArr[5]);
@@ -194,7 +264,7 @@ function level6Check(currButton) {
 	checkCombo(endData[currentLevel]);
 }
 
-function level7Check(currButton) {
+function level9Check(currButton) {
 
 	buttonClicks += 1;
 	document.getElementById('levelTracker').childNodes[1].nodeValue = buttonClicks;
