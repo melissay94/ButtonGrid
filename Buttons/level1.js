@@ -1,31 +1,44 @@
 "use strict"; // strict syntax
 
+var upSound = new Audio("Buttons/media/8.mp3");
+var dnSound = new Audio("Buttons/media/1.mp3");
+
 // Changes button from current color to the opposite color
 function buttonChange(connectedButton) {
+
+	console.log(upSound, " ", dnSound);
 	
 	if (connectedButton.style.backgroundColor === dGreen) {
 		connectedButton.style.backgroundColor = lGreen;
+		upSound.play();
 	} 
 	else if (connectedButton.style.backgroundColor === lGreen) {
 		connectedButton.style.backgroundColor = dGreen;
+		dnSound.play();
 	}
-	else if (connectedButton.style.backgroundColor === lBlue) {
-		connectedButton.style.backgroundColor = dBlue;
-	} 
 	else if (connectedButton.style.backgroundColor === dBlue) {
 		connectedButton.style.backgroundColor = lBlue;
+		upSound.play();
+	} 
+	else if (connectedButton.style.backgroundColor === lBlue) {
+		connectedButton.style.backgroundColor = dBlue;
+		dnSound.play();
 	}
 	else if (connectedButton.style.backgroundColor === dOrange) {
 		connectedButton.style.backgroundColor = lOrange;
+		upSound.play();
 	} 
 	else if (connectedButton.style.backgroundColor === lOrange) {
 		connectedButton.style.backgroundColor = dOrange;
-	}
-	else if (connectedButton.style.backgroundColor === lPurple) {
-		connectedButton.style.backgroundColor = dPurple;
+		dnSound.play();
 	}
 	else if (connectedButton.style.backgroundColor === dPurple) {
 		connectedButton.style.backgroundColor = lPurple;
+		upSound.play();
+	}
+	else if (connectedButton.style.backgroundColor === lPurple) {
+		connectedButton.style.backgroundColor = dPurple;
+		dnSound.play();
 	}
 }
 

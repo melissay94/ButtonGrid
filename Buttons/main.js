@@ -6,6 +6,7 @@ var currentLevel = 0;
 var total = 0;
 var buttonClicks = 0;
 var clickValue;
+var levelSound = new Audio("Buttons/media/level-complete.mp3");
 
 // Starts game by displaying board after start button is pressed
 function startGame() {
@@ -170,6 +171,7 @@ function checkCombo(endArr) {
 		else if (i === endArr.length - 1) {
 			currentLevel++;
 			total += totalPoints[currentLevel - 1];
+			levelSound.play();
 			if (currentLevel > gameData.length - 1) {
 				document.getElementById('score').innerHTML = ' ';
 				document.getElementById('answerKey').removeChild(document.getElementById('answerPhoto'));
