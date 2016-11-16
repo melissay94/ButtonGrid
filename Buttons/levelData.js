@@ -123,7 +123,7 @@ var level10 = [dGreen, dPurple, dBlue, dOrange,
 
 gameData.push(level10);
 
-var level10End = [lGreen, lPurple, lBlue, dOrange,
-				lOrange, dBlue, lBlue, dGreen, 
-				dBlue, lOrange, dBlue, lPurple,
-				dBlue, lGreen, dBlue, dOrange]; 
+var level10End = [lGreen, dPurple, dBlue, lOrange,
+				lOrange, lBlue, dBlue, dGreen, 
+				dBlue, lOrange, lBlue, lPurple,
+				lBlue, lGreen, dBlue, lOrange]; 
