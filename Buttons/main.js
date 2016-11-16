@@ -52,7 +52,6 @@ function goHome() {
 // Loads a level based on the array passed in
 function loadLevel(startArr) {
 	document.getElementById('buttonArea').innerHTML = '';
-	document.getElementById('buttonArea').appendChild(createAnswerKey(startArr));
 
 	buttonArr = [];
 	buttonClicks = 0;
@@ -65,6 +64,14 @@ function loadLevel(startArr) {
 	var gridWidth = Math.round(buttonArea.offsetWidth * .8 * .4);
 
 	var textSize = 50/rowsNeeded;
+
+	// Creates level tracker for which level you're currently on
+	var levelTracker = document.createElement('h2');
+	levelTracker.setAttribute('id', 'levelTracker');
+	levelTracker.appendChild(document.createTextNode('Current Level: ' + (currentLevel + 1) + ' Number of presses: '));
+	clickValue = document.createTextNode(buttonClicks);
+	levelTracker.appendChild(clickValue);
+	grid.appendChild(levelTracker);
 
 	// Creates buttons based on array passed in
 	for (var i = 0; i < startArr.length; i++) {
@@ -94,15 +101,8 @@ function loadLevel(startArr) {
 		}
 	}
 
-	// Creates level tracker for which level you're currently on
-	var levelTracker = document.createElement('h2');
-	levelTracker.setAttribute('id', 'levelTracker');
-	levelTracker.appendChild(document.createTextNode('Current Level: ' + (currentLevel + 1) + ' Number of presses: '));
-	clickValue = document.createTextNode(buttonClicks);
-	levelTracker.appendChild(clickValue);
-	grid.appendChild(levelTracker);
-
 	document.getElementById('buttonArea').appendChild(grid);
+	document.getElementById('buttonArea').appendChild(createAnswerKey(startArr));
 	
 }
 
