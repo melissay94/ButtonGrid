@@ -25,7 +25,7 @@ function ButtonsRules({ activeButtons }: RulesProps) {
   return(
     <ListGroup>
       { activeButtons.map((item: string, index: number) => (
-      <ListGroupItem key={ index }>{ capitalize(item) }: { rulesList[item] }</ListGroupItem>
+      <ListGroupItem key={ index } className={`light-${item} bold`}>{ capitalize(item) }: { rulesList[item] }</ListGroupItem>
       )) }
     </ListGroup>
   )

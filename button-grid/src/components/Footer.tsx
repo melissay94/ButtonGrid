@@ -3,7 +3,7 @@ import { Navbar, Nav, NavbarText, NavItem, NavLink } from "reactstrap";
 
 function Footer() {
   return(
-    <Navbar>
+    <Navbar color="dark" dark>
       <NavbarText>Copyright © 2020, Melissa Young</NavbarText>
       <Nav>
         <NavItem>
